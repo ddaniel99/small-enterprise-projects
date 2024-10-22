@@ -11,7 +11,11 @@ Enter the risk free rate when prompted.
 The tool calculates a correlation matrix, log returns, volatility, and Sharpe ratio for each stock in the portfolio per years in the portfolio.
 <br>
 The dataframe outputs are:
+<br>
   -<b>"df"</b> dataframe with the closing prices of each stock in the portfolio.
+<br>
   -<b>"sharpesdf"</b> dataframe with the Sharpe ratio and volatility of each stock in the portfolio.
+<br>
   -<b>"returnsdf"</b> dataframe with the log returns of each stock in the portfolio.
+<br>
   -<b>"corrmx"</b> the correlation matrix of the portfolio.
