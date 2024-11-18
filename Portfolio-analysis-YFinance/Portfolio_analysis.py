@@ -55,13 +55,13 @@ for i in companies.values():
     url = f"https://finance.yahoo.com/quote/{i}/history/?frequency={p}&period1=1571042725&period2={date}"
     driver.get(url)
 
-    table_data = driver.find_element(By.CSS_SELECTOR, "div[class='table-container yf-ewueuo']")
-    rows = table_data.find_elements(By.CSS_SELECTOR, "tr[class='yf-ewueuo']")
+    table_data = driver.find_element(By.CSS_SELECTOR, "div[class='table-container yf-j5d1ld']")
+    rows = table_data.find_elements(By.CSS_SELECTOR, "tr[class='yf-j5d1ld']")
 
     company = {}
 
     for row in rows:
-        values = row.find_elements(By.CSS_SELECTOR, "td[class='yf-ewueuo']")
+        values = row.find_elements(By.CSS_SELECTOR, "td[class='yf-j5d1ld']")
         values = [value.text for value in values if value == values[0] or value == values[4]]
         try:
             company[values[0]] = values[1]
