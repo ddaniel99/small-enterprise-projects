@@ -87,7 +87,7 @@ driver.close()
 returnsdf = pd.DataFrame()
 
 for column in df.columns:
-    returns = np.log(df[column]/df[column].shift(1))
+    returns = np.log(df[column]/df[column].shift(-1))
     returnsdf = returnsdf.join(returns, how="outer")
 
 # count the number of years in returnsdf
